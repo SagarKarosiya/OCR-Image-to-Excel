@@ -1,7 +1,0 @@
-flask
-pytesseract
-opencv-python
-pillow
-pandas
-openpyxl
-gunicorn
