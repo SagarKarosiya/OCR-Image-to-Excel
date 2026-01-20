@@ -3,7 +3,7 @@ import pytesseract
 import os
 
 # Tesseract path (Windows)
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+#pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 
 def extract_structured_data(image_path):
@@ -54,3 +54,4 @@ def extract_structured_data(image_path):
             data[f"Text {i}"] = line
 
     return data
+
