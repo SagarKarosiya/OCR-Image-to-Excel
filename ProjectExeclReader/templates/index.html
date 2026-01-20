@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image to Excel Converter</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Animated Gradient Background */
+        body {
+            height: 100vh;
+            background: linear-gradient(
+                270deg,
+                #667eea,
+                #764ba2,
+                #6a11cb,
+                #2575fc
+            );
+            background-size: 800% 800%;
+            animation: gradientBG 12s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Card */
+        .card {
+            background: #ffffff;
+            width: 420px;
+            padding: 32px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        /* File Input */
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px dashed #667eea;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-bottom: 22px;
+        }
+
+        input[type="file"]:hover {
+            background: #f3f4ff;
+        }
+
+        /* Button */
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Loader */
+        .loader {
+            display: none;
+            margin: 20px auto;
+            width: 45px;
+            height: 45px;
+            border: 5px solid #ddd;
+            border-top: 5px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Success Message */
+        .success {
+            display: none;
+            color: green;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 12px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Image ➜ Excel</h1>
+        <p>Upload a document image and convert it into an Excel file</p>
+
+        <form method="POST" enctype="multipart/form-data" onsubmit="showLoader()">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Convert to Excel</button>
+        </form>
+
+        <!-- Loader -->
+        <div class="loader" id="loader"></div>
+
+        <!-- Success Message -->
+        <div class="success" id="success">
+            ✅ Excel file generated successfully!
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © SagarKarosiya — All Rights Reserved
+    </div>
+
+    <script>
+        function showLoader() {
+            document.getElementById("loader").style.display = "block";
+            document.getElementById("success").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
