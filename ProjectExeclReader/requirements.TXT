@@ -1,6 +1,9 @@
 flask
-gunicorn
 pytesseract
-opencv-python-headless
 pandas
 numpy
+opencv-python
+pillow
+pandas
+openpyxl
+gunicorn
