@@ -6,7 +6,7 @@ Turn any image into a structured Excel file — even if the image contains a sin
 This project uses OCR (Optical Character Recognition) to extract text from images and automatically converts it into an .xlsx Excel file. Simple, fast, and beginner‑friendly.
 
 
-Features
+# Features:
 
 ✅ Extract text from any image (PNG, JPG, JPEG)
 ✅ Works with single letters, words, sentences, or full documents
@@ -16,7 +16,7 @@ Features
 ✅ Clean project structure (easy to understand & extend)
 
 
-How It Works
+# How It Works:
 
 User uploads an image
 
