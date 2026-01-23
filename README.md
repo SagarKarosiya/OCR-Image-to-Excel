@@ -28,7 +28,8 @@ Data is written into an Excel file
 
 Excel file is downloaded automatically
 
-🛠️ Tech Stack
+
+# 🛠️ Tech Stack
 
 Python 3
 
